@@ -1,6 +1,8 @@
 @echo off
 
 if "%1" EQU "prod" goto prod
+    python manage.py makemigrations
+    python manage.py migrate
     python manage.py runserver --settings=django_vue_app.settings.dev
     goto exit
 
