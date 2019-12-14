@@ -1,3 +1,10 @@
 Django
 django-debug-toolbar
-django-webpack-loader
+django-extensions
+django-cors-headers
+djangorestframework
+djangorestframework-jwt
+PyJWT
+pillow
+gunicorn
+mysqlclient
