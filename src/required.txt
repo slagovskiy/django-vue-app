@@ -2,6 +2,8 @@ Django
 django-debug-toolbar
 django-extensions
 django-cors-headers
+markdown
+django-filter
 djangorestframework
 djangorestframework-jwt
 PyJWT
