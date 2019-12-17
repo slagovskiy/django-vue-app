@@ -14,17 +14,12 @@
                 </label>
             </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+            <div class="link">or <a href="#">Register</a></div>
         </form>
     </div>
 </template>
 
 <style scoped>
-    html,
-    body {
-        height: 100%;
-    }
-
     body {
         display: -ms-flexbox;
         display: flex;
@@ -32,7 +27,6 @@
         align-items: center;
         padding-top: 40px;
         padding-bottom: 40px;
-        background-color: #f5f5f5;
     }
 
     .form-signin {
@@ -68,5 +62,8 @@
         margin-bottom: 10px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+    }
+    .form-signin .link {
+        padding-top: 10px;
     }
 </style>
