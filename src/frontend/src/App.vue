@@ -21,7 +21,7 @@
     }
 
     body {
-        margin-bottom: 60px; /* Margin bottom by footer height */
+        /* margin-bottom: 60px; /* Margin bottom by footer height */
         background-color: #f5f5f5 !important;
     }
 

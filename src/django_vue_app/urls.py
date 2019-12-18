@@ -23,9 +23,11 @@ from rest_framework_jwt.views import refresh_jwt_token, obtain_jwt_token, verify
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html')),
-    url(r'^api-token-auth/', obtain_jwt_token),
-    url(r'^api-token-refresh/', refresh_jwt_token),
-    url(r'^api-token-verify/', verify_jwt_token),
+
+    url(r'^api/v1/auth/obtain_token/', obtain_jwt_token),
+    url(r'^api/v1/auth/refresh_token/', refresh_jwt_token),
+    url(r'^api/v1/auth/token-verify/', verify_jwt_token),
+
     path('admin/', admin.site.urls),
 ]
 
