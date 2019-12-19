@@ -59,18 +59,7 @@
                     this.$store.dispatch('login', this.form)
                         .then(() => {
                             if (this.$store.getters.jwt) {
-                                console.log(this.$store.getters.jwt)
-                                /*
-                                this.$store.dispatch('autoLogin')
-                                    .then(() => {
-                                        if (!this.error) {
-                                            if (this.$route.query['redirect'])
-                                                this.$router.push(this.$route.query['redirect'])
-                                            else
-                                                this.$router.push({name: 'user-profile'})
-                                        }
-                                    })
-                                 */
+                                this.$router.push({name: 'userAutoLogin'})
                             }
                         })
                         .catch(() => {

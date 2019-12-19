@@ -33,10 +33,15 @@ const routes = [
         ]
     },
     {
+        path: '/user/autologin',
+        name: 'userAutoLogin',
+        component: () => import('../views/user/AutoLogin')
+    },
+    {
         path: '/user/login',
         name: 'userLogin',
         component: () => import('../views/user/Login')
-    }
+    },
 ]
 
 const router = new VueRouter({

@@ -54,29 +54,6 @@ export default {
                     }
                 })
         },
-        /*
-        changePassword({commit}, payload) {
-            commit('clearMessages')
-            commit('setLoading', true)
-            return api.http.put(api.userPassword, payload)
-                .then(
-                    () => {
-                        commit('setMessage', 'Password has been successfully changed.')
-                        commit('setLoading', false)
-                    })
-                .catch((error) => {
-                    if (error.response.status === 400) {
-                        commit('setError', 'Wrong password.')
-                        commit('setLoading', false)
-                    } else if (error.response.status === 500) {
-                        commit('setError', 'Error on server, please, try again later.')
-                        commit('setLoading', false)
-                    } else {
-                        commit('setError', 'Something going wrong. ' + error.response.statusText)
-                        commit('setLoading', false)
-                    }
-                })
-        },
         autoLogin: function ({commit}) {
             commit('clearMessages')
             commit('setLoading', true)
@@ -105,6 +82,29 @@ export default {
             } else {
                 commit('setLoading', false)
             }
+        },
+        /*
+        changePassword({commit}, payload) {
+            commit('clearMessages')
+            commit('setLoading', true)
+            return api.http.put(api.userPassword, payload)
+                .then(
+                    () => {
+                        commit('setMessage', 'Password has been successfully changed.')
+                        commit('setLoading', false)
+                    })
+                .catch((error) => {
+                    if (error.response.status === 400) {
+                        commit('setError', 'Wrong password.')
+                        commit('setLoading', false)
+                    } else if (error.response.status === 500) {
+                        commit('setError', 'Error on server, please, try again later.')
+                        commit('setLoading', false)
+                    } else {
+                        commit('setError', 'Something going wrong. ' + error.response.statusText)
+                        commit('setLoading', false)
+                    }
+                })
         },
         registerUser: function({commit}, payload) {
             commit('clearMessages')
