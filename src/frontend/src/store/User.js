@@ -21,7 +21,9 @@ export default {
                 api.http.defaults.headers.common['Authorization'] = 'JWT ' + this.getters.jwt
             } else {
                 localStorage.removeItem('jwt_token')
+                console.log(this.state)
                 Object.assign(this.state, this.initState)
+                console.log(this.state)
                 api.http.defaults.headers.common['Authorization'] = ''
             }
         }
@@ -36,6 +38,7 @@ export default {
         login({commit}, payload) {
             commit('clearMessages')
             commit('setLoading', true)
+            commit('updateToken', '')
             return api.http.post(api.getToken, payload)
                 .then(
                     (response) => {

@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django_extensions',
     'corsheaders',
     'rest_framework',
+
+    'django_vue_app.userext',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +128,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+AUTH_USER_MODEL = 'userext.User'
 
 
 # Static files (CSS, JavaScript, Images)

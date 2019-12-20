@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import permissions
 
 from .serializers import UserSerializer, ChangePasswordSerializer, AvatarSerializer, UserInfoSerializer, NewUserSerializer, RestoreUserSerializer
+from .models import User
 
 
 class APIUser(APIView):

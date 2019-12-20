@@ -10,6 +10,7 @@
     export default {
         mounted: function () {
             this.$nextTick(function () {
+                /*
                 this.$store.dispatch('autoLogin')
                     .then(() => {
                         if (!this.error) {
@@ -19,6 +20,7 @@
                                 this.$router.push({name: 'userProfile'})
                         }
                     })
+                */
             })
         }
     }

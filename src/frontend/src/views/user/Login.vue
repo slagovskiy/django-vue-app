@@ -6,15 +6,15 @@
             <b-form-group
                 id="input-group-1"
                 label=""
-                label-for="username"
+                label-for="email"
                 description=""
             >
                 <b-form-input
-                    id="username"
-                    v-model="form.username"
+                    id="email"
+                    v-model="form.email"
                     type="text"
                     required
-                    placeholder="Enter username"
+                    placeholder="Enter email"
                 ></b-form-input>
             </b-form-group>
             <b-form-group
@@ -38,15 +38,19 @@
 </template>
 
 <script>
+    import globalMixin from '../../mixins/global'
+    import userMixin from '../../mixins/user'
+
     // eslint-disable-next-line
     var reEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
     export default {
+        mixins: [globalMixin, userMixin],
         data() {
             return {
                 form: {
-                    username: '',
-                    password: ''
+                    email: 'slagovskiy@gmail.com',
+                    password: '123qwe'
                 }
             }
         },
@@ -58,7 +62,8 @@
                 //if (this.$refs.form.validate()) {
                     this.$store.dispatch('login', this.form)
                         .then(() => {
-                            if (this.$store.getters.jwt) {
+                            console.log(this.$store.getters.jwt)
+                            if (this.$store.getters.jwt!='') {
                                 this.$router.push({name: 'userAutoLogin'})
                             }
                         })
@@ -68,7 +73,7 @@
             },
             onReset() {
                 this.form = {
-                    username: '',
+                    email: '',
                     password: ''
                 }
             },
